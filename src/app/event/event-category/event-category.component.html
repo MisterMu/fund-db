@@ -1,0 +1,17 @@
+<div class="host">
+  <h2>{{data.title}}</h2>
+  <div class="content">
+    <div class="day">
+      <h3>Today</h3>
+      <ng-container *ngFor="let event of data.today; let id = index;">
+        <app-event-box [event]="event" [last]="(id + 1) === data.today.length"></app-event-box>
+      </ng-container>
+    </div>
+    <div class="day">
+        <h3>Yesterday</h3>
+        <ng-container *ngFor="let event of data.yesterday; let id = index;">
+          <app-event-box [event]="event" [last]="(id + 1) === data.yesterday.length"></app-event-box>
+        </ng-container>
+      </div>
+  </div>
+</div>

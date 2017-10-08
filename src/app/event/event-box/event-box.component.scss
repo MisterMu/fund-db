@@ -1,0 +1,43 @@
+.host {
+  cursor: pointer;
+  &:hover {
+    background-color: lightgrey;
+  }
+  position: relative;
+  width: 100%;
+  height: 80px;
+  font-size: 18px;
+  .booking_status {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+  }
+  .name, .time {
+    width: 250px;
+    position: absolute;
+    left: 85px;
+  }
+  .name {
+    top: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .time {
+    font-size: .85em;
+    top: 28px;
+  }
+  .br {
+    width: calc(100% - 80px);
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
