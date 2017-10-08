@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from "@angular/core";
-import { IEventModel } from "../event.interface";
+import { Component, OnInit, Input } from '@angular/core';
+import { IEventModel } from '../event.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-event-box',
@@ -9,9 +10,13 @@ import { IEventModel } from "../event.interface";
 export class EventBoxComponent implements OnInit {
   @Input() event: IEventModel;
   @Input() last: boolean;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  book() {
+    this.router.navigate(['/booking']);
   }
 
 }

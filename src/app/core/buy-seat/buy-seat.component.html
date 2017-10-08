@@ -1,0 +1,87 @@
+<div class="host">
+  <h2>AUDITORIUM SEATING PLAN</h2>
+  <div class="seat-container">
+    <div class="row">
+      <div class="row-label">L</div>
+      <ng-container *ngFor="let seat of row.l; let id = index;">
+        <div class="seat" [ngClass]="{booked: !seat, space: id === 6 || id === 21}">{{id + 1}}</div>
+      </ng-container>
+      <div class="row-label">L</div>
+    </div>
+    <div class="row">
+      <div class="row-label">K</div>
+      <ng-container *ngFor="let seat of row.k; let id = index;">
+          <div class="seat" [ngClass]="{booked: !seat, space: id === 6 || id === 21}">{{id + 1}}</div>
+      </ng-container>
+      <div class="row-label">K</div>
+    </div>
+    <div class="row space">
+      <div class="row-label">J</div>
+      <ng-container *ngFor="let seat of row.j; let id = index;">
+          <div class="seat" [ngClass]="{booked: !seat, space: id === 6 || id === 21}">{{id + 1}}</div>
+      </ng-container>
+      <div class="row-label">J</div>
+    </div>
+    <div class="row">
+      <div class="row-label">H</div>
+      <ng-container *ngFor="let seat of row.h; let id = index;">
+          <div class="seat" [ngClass]="{booked: !seat, space: id === 6 || id === 21}">{{id + 1}}</div>
+      </ng-container>
+      <div class="row-label">H</div>
+    </div>
+    <div class="row">
+      <div class="row-label">G</div>
+      <ng-container *ngFor="let seat of row.g; let id = index;">
+          <div class="seat" [ngClass]="{booked: !seat, space: id === 6 || id === 21}">{{id + 1}}</div>
+      </ng-container>
+      <div class="row-label">G</div>
+    </div>
+    <div class="row space">
+      <div class="row-label">F</div>
+      <ng-container *ngFor="let seat of row.f; let id = index;">
+          <div class="seat" [ngClass]="{booked: !seat, space: id === 6 || id === 21}">{{id + 1}}</div>
+      </ng-container>
+      <div class="row-label">F</div>
+    </div>
+    <div class="row">
+      <div class="row-label">E</div>
+      <ng-container *ngFor="let seat of row.e; let id = index;">
+          <div class="seat" [ngClass]="{booked: !seat, space: id === 6 || id === 21}">{{id + 1}}</div>
+      </ng-container>
+      <div class="row-label">E</div>
+    </div>
+    <div class="row">
+      <div class="row-label">D</div>
+      <ng-container *ngFor="let seat of row.d; let id = index;">
+          <div class="seat" [ngClass]="{booked: !seat, space: id === 6 || id === 21}">{{id + 1}}</div>
+      </ng-container>
+      <div class="row-label">D</div>
+    </div>
+    <div class="row space">
+      <div class="row-label">C</div>
+      <ng-container *ngFor="let seat of row.c; let id = index;">
+          <div class="seat" [ngClass]="{booked: !seat, space: id === 6 || id === 21}">{{id + 1}}</div>
+      </ng-container>
+      <div class="row-label">C</div>
+    </div>
+    <div class="row">
+      <div class="row-label">B</div>
+      <ng-container *ngFor="let seat of row.b; let id = index;">
+        <div class="seat" [ngClass]="{booked: !seat, space: id === 5 || id === 20}">{{id + 1}}</div>
+      </ng-container>
+      <div class="row-label">B</div>
+    </div>
+    <div class="row">
+      <div class="row-label">A</div>
+      <ng-container *ngFor="let seat of row.a; let id = index;">
+        <div class="seat" [ngClass]="{booked: !seat, space: id === 3 || id === 18}">{{id + 1}}</div>
+      </ng-container>
+      <div class="row-label">A</div>
+    </div>
+  </div>
+  <div class="platform">PLATFORM</div>
+  <div class="btn-container">
+    <app-button class="red" (onAction)="back()">Cancel</app-button>
+    <app-button class="green">Proceed</app-button>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+.host {
+  width: 1200px;
+  margin: auto;
+  position: relative;
+  h2 {
+    color: #F25821;
+  }
+  .seat-container {
+    text-align: center;
+    .row {
+      margin-bottom: 5px;
+      &.space {
+        margin-bottom: 15px;
+      }
+      .row-label {
+        width: 28px;
+        height: 35px;
+        background-color: #e8e2dd;
+        color: #F25821;
+        display: inline-block;
+        text-align: center;
+        padding-top: 10px;
+        box-sizing: border-box;
+      }
+      .seat {
+        @extend .row-label;
+        color: white;;
+        background-color: #F25821;
+        position: relative;
+        &.space {
+          margin-right: 15px;
+        }
+        &:hover {
+          @extend .booked;
+        }
+      }
+      .booked {
+        &:after {
+          content: "\f00c";
+          font-family: FontAwesome;
+          font-size: 2em;
+          color: black;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+  .platform {
+    width: 800px;
+    height: 35px;
+    background-color: lightgrey;
+    text-align: center;
+    padding-top: 8px;
+    box-sizing: border-box;
+    margin: 30px auto;
+  }
+  .btn-container {
+    position: absolute;
+    right: 100px;
+    app-button {
+      display: inline-block;
+    }
+  }
+}
